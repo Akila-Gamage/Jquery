@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Document</title>
+    <style>
+        .photos img{
+            height: 200px;
+            width: fit-content;
+        } 
+        .photos{
+            display: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="all-tours" class="links">
+        <h1>Guided Tours</h1>
+        <ul>
+          <li class="tour usa" data-discount="199">
+            <h2>New York, New York</h2>
+            <span class="details">£1,899 for 7 nights</span>
+            <button class="book">Book Now</button>
+            <a href="#" class="see-photos">See Photos</a>
+            <ul class="photos">
+              <li>
+                <img src="paris1.jpg">
+                <span>Arc de Triomphe</span>
+      </li> <li>
+             <img src="paris2.jpg">
+                <span>The Eiffel Tower</span>
+              </li>
+              <li>
+                <img src="paris3.jpg">
+                <span>Notre Dame de Paris</span>
+      </li> </ul>
+          </li>
+          <li class="tour france" data-discount="99">
+            <h2>Paris, France</h2>
+            <span class="details">£1,499 for 5 nights</span>
+            <button class="book">Book Now</button>
+            <a href="#" class="see-photos">See Photos</a>
+            <ul class="photos">
+              <li>
+                <img src="paris1.jpg">
+                <span>Arc de Triomphe</span>
+      </li> <li>
+                <img src="paris2.jpg">
+                <span>The Eiffel Tower</span>
+              </li>
+              <li>
+                <img src="paris3.jpg">
+                <span>Notre Dame de Paris</span>
+      </li> </ul>
+          </li>
+          <li class="tour uk" data-discount="149">
+            <h2>London, UK</h2>
+            <span class="details">£2,199 for 5 nights</span>
+            <button class="book">Book Now</button>
+            <a href="#" class="see-photos">See Photos</a>
+            <ul class="photos">
+              <li>
+                <img src="paris1.jpg">
+                <span>Arc de Triomphe</span>
+      </li> <li>
+                <img src="paris2.jpg">
+                <span>The Eiffel Tower</span>
+              </li>
+              <li>
+                <img src="paris3.jpg">
+                <span>Notre Dame de Paris</span>
+      </li> </ul>
+      </li> </ul>
+      </div>
+      <script>
+        $(document).ready(function() {
+            $('.see-photos').on('click',function(){
+                $(this).closest('.tour').find('.photos').slideToggle();
+            });
+            // $('#nights').on('keyup', function() {
+            //     var price = +$(this).closest('.tour').data('daily-price');
+            //     var quantity = +$(this).val();
+            //     $('#total').text(price * quantity);
+            //     $('#nights-count').text(quantity);
+            // }); 
+        });
+    </script>
+</body>
+</html>

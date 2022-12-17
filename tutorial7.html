@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div class="homepage-wrapper">
+      <h2>Welcome to Anne’s Travels</h2>
+      <p>Fly to New York today for as little as
+     <span>£299.99</span></p>
+    </div>
+    <div id="vacations-wrapper">
+        <h1>Vacation Packages</h1>
+        <ul id="vacations">
+          <li class="vacation america">
+            <h2>San Francisco, California</h2>
+            <span class="details">£700</span>
+          </li>
+          <li class="vacation america">
+            <correct><h2>Washington DC, District of Columbia</h2></correct>
+            <span class="details">£400</span>
+          </li>
+          <li class="vacation europe">
+            <h2>London, England</h2>
+            <span class="details">£1,100</span>
+          </li>
+          <li class="vacation asia">
+            <h2>Shanghai, China</h2>
+            <span class="details">£1,200</span>
+          </li> 
+        </ul>
+        <ul class="sorting">
+          <li><a href="#">America</a></li>
+          <li><a href="#">Europe</a></li>
+          <li><a href="#">Asia</a></li>
+        </ul> 
+    </div>  
+    <div id="tours-wrapper">
+        <h1>Guided Tours</h1>
+        <ul id="tours">
+      <li class="america">
+      <h2>New York, New York</h2>
+      <span class="details">£1,899 for 7 nights</span> 
+      <button class="book">Book Now</button>
+      <ul class="vote"><li><a href="#">↑</a></li><li><a
+      href="#">↓</a></li></ul> </li>
+          <li class="europe">
+            <h2>Paris, France</h2>
+            <span class="details">£2,499 for 7 nights</span>
+      <ul class="vote"><li><a href="#">↑</a></li><li><a href="#">↓</a></li></ul>
+          </li>
+          <li class="europe sale">
+      <h2>Madrid, Spain</h2>
+      <span class="details">£1,577 for 5 nights</span> <ul class="vote"><li><a href="#">↑</a></li><li><a
+      href="#">↓</a></li></ul> </li>
+      <li class="asia">
+      <h2>Tokyo, Japan</h2>
+      <span class="details">£1,999 for 5 nights</span> <ul class="vote"><li><a href="#">↑</a></li><li><a
+      href="#">↓</a></li></ul> </li>
+      </ul>
+        <ul class="sorting">
+          <li><a href="#">America</a></li>
+          <li><a href="#">Europe</a></li>
+          <li><a href="#">Asia</a></li>
+      </ul> 
+    </div>
+    <script>
+        $(document).ready(function(){
+            // console.log("span").text("£100.00");
+            // $("span").text("£100.00");
+            // $("h2").text("Colombo, Sri Lanka");
+            // $(".asia h2").text("Colombo, Sri lanka");
+            // $(".asia").find("h2").text("Colombo, Sri Lanka");
+            // $("#tours li").css('border', "1px solid red");
+            // $("#tours > li").css('border', "1px solid red");
+            // $("#tours, .asia, .sale").css('border', "1px solid red");
+            // $("#tours li:first").css('border', "1px solid red");
+            // $("#tours > li:even").css('border', "1px solid red");
+            // $("#tours").children("li").even().css('border', "1px solid red");
+            // $("#vacations li").first().text("feeling lucky");
+
+        });
+        $(document).ready(function(){
+            // var tag = $("<p>Feeling Lucky !</p>")
+            // $('#vacations li').first().append(tag);
+            $(".featured").parent().css({"color":"red","border":"2px solid red"});
+        });
+        $(document).ready(function(){
+            var message = $('<span>Call 02079115000 to book this tour </span>');
+            $('.book').before(message);
+        });
+
+    </script>
+
+  </body>
+</html>

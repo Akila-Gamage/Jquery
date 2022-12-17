@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>jQuery Adventures</title>
+</head>
+<body>
+    <h1>Where do you want to go?</h1>
+    <p>Plan your next adventure.</p>
+    <ul id="destinations">
+        <li>Rome</li>
+        <li>
+            <ul>
+                <li>Paris</li>
+            </ul>
+        </li>
+        <li class="promo">Rio</li>
+
+    </ul>
+    <ul id="destination">
+        <li>Rome</li>
+        <li>
+            <ul id="france">
+                <li>Paris</li>
+            </ul>
+        </li>
+        <li class="promo">Rio</li>
+
+    </ul>
+    <h1>End of the Document</h1>
+<script>
+    jQuery(document).ready(function(){
+        $("h1").text("Where to?");
+        $("#destinations li").text("Orlando");
+        // $(".promo, #france").text("qwerty");
+        $("#destination > li").text("sri lanka");
+
+    });
+
+</script>
+    
+</body>
+</html>

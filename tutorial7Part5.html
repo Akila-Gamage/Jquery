@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Document</title>
+    <style>
+        .photos img{
+            width: 200px;
+            height: 200px;
+        }
+        span{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="tour">
+        <h2>Paris, France Tour</h2>
+        <p>£2,499 for 7 Nights</p>
+        <button>See photos from our last tour</button>
+        <ul class="photos">
+          <li>
+            <img src="paris1.jpg">
+            <span>Arc de Triomphe</span>
+      </li> <li>
+            <img src="paris2.jpg">
+            <span>The Eiffel Tower</span>
+          </li>
+          <li>
+            <img src="paris3.jpg">
+            <span>Notre Dame de Paris</span>
+      </li> </ul>
+      </div>
+      <script>
+        $(document).ready(function(){
+            // $('button').on('click',function(){
+            //     // alert($('img').length);
+            //     $(this).closest('#tour').find('.photos').slideToggle();
+            // });
+            $('li').mouseenter(function(){
+                $(this).closest('li').find('span').slideToggle();
+
+            });
+        });
+        
+        
+    </script>
+</body>
+</html>

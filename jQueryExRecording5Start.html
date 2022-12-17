@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<style>
+	body{
+		font-family: arial;
+		background-color:#999;
+	}	
+	
+.vacation {
+	width: 280px;
+	height: 280px;
+	padding: 20px;
+	float: left;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+	background-color:hsla(0,0%,10%,0.68);
+	text-align: center;
+	font-size: 12pt;
+	color: #999;
+}	
+
+button {
+    background-color: #4CAF50;
+	font-size: 12pt;
+	color: black;
+	text-transform: uppercase;
+    border: none;
+	font-weight: bold;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+	width: 250px;
+	height: 30px;
+}
+	
+	h3 {
+		font-size: 16pt;
+	}
+	.comments {
+		font-style: italic;
+		text-align: left;
+		margin: 50px 0;
+		list-style: none;
+	}
+	p{
+		clear: both;
+	}
+</style>
+</head>
+
+<body>
+<ul>
+<div class="vacation" data-price="399.99">
+ <h3>Hawaiian Vacation</h3>
+ <p>$399.99 per ticket</p>
+ <p>
+ Tickets:
+ <input type="number" class="quantity" value="1">
+ </p>
+</div>
+<p>Total Price: $<span id="total">399.99</span></p>
+</ul>
+<script>
+	$(document).ready(function() {
+		
+});
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="tours">
+        <h1>Guided Tours</h1>
+        <ul>
+          <li class="usa tour">
+            <h2>New York, New York</h2>
+            <span class="details">£1,899 for 7 nights</span>
+            <button class="book">Book Now</button>
+      </li> </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var message = $('<p>Call 02079115000 to book this tour </p>');
+            // $('.book').before(message);
+            $('.book').click(function(){
+                $('.book').remove();
+                $('.usa').append(message);
+            });
+        });
+        
+    </script>
+
+    
+</body>
+</html>

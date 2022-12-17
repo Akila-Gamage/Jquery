@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="tours">
+        <h1>Guided Tours</h1>
+        <ul>
+          <li class="usa tour">
+            <h2>New York, New York</h2>
+            <span class="details">£1,899 for 7 nights</span>
+            <div>
+              <button class="book">Book Now</button>
+            </div>
+          </li>
+          <li class="europe tour">
+            <h2>Paris, France</h2>
+            <span class="details">£2,299 for 7 nights</span>
+            <div>
+              <button class="book">Book Now</button>
+            </div>
+          </li>
+          <li class="asia tour">
+            <h2>Tokyo, Japan</h2>
+            <span class="details">£3,799 for 7 nights</span>
+            <div>
+              <button class="book">Book Now</button>
+            </div>
+      </li> </ul>
+      </div>
+      <script>
+        // $(document).ready(function(){
+            
+        //     // $('.book').before(message);
+        //     $('.tour').on('click',function(){
+        //         var message = $('<p>Call 02079115000 to book this tour </p>');
+        //         $(this).closest('.tour').append(message);
+        //         $(this).find('.book').remove();
+        //     });
+        // });
+        $(document).ready(function(){
+            
+            // $('.book').before(message);
+            $('.tour').on('click',function(){
+                var message = $('<p>Call 02079115000 for a £<discount>discount. </p>');
+                var tour = $(this).closest('.tour');
+                tour.append(message);
+                var disc=$(this).data('discount');
+                tour.append(disc);
+                $(this).find('.book').remove();
+            });
+        });
+        
+    </script>
+</body>
+</html>

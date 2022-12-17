@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<style>
+	body{
+		font-family: arial;
+		background-color:#999;
+	}	
+	
+ul li.vacation {
+	list-style: none;
+	width: 280px;
+	height: 280px;
+	padding: 20px;
+	float: left;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+	background-color:hsla(0,0%,10%,0.68);
+	text-align: center;
+	font-size: 12pt;
+	color: #999;
+}	
+
+button {
+    background-color: #4CAF50;
+	font-size: 12pt;
+	color: black;
+	text-transform: uppercase;
+    border: none;
+	font-weight: bold;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+	width: 250px;
+	height: 30px;
+}
+	
+	h3 {
+		font-size: 16pt;
+	}
+	.comments {
+		font-style: italic;
+		text-align: left;
+		margin: 50px 0;
+		list-style: none;
+	}
+</style>
+</head>
+
+<body>
+<ul>
+<li class="vacation onsale" data-price="399.99">
+ <h3>Hawaiian Vacation</h3>
+ <ul class="comments">
+ <li>"Amazing deal!"</li>
+ <li>"Want to go!"</li>
+ </ul>
+ <button>Get Price</button>
+</li>
+<li class="vacation onsale" data-price="499.99">
+ <h3>Orlando</h3>
+ <ul class="comments">
+ <li>There aren't any comments on this deal yet</li>	
+ </ul>
+ <button>Get Price</button>
+</li>
+<li class="vacation" data-price="699.99">
+ <h3>Visit Japan</h3>
+ <ul class="comments">
+ <li>"Never Been but really can't wait!"</li>
+ </ul>
+ <button>Get Price</button>
+</li>
+</ul>
+<script>
+	// $(document).ready(function() {
+	// 	var price = $('<p>From $399.99</p>');
+	// 	$('.vacation').append(price);
+	// 	$('button').remove();
+	// });
+	$('button').on('click',function(){
+		var vacation = $(this).closest('.vacation');
+		var amount = vacation.data('price');
+		var price = $('<p>From $'+amount+'</p>');
+		vacation.append(price);
+		$(this).remove();
+	})
+	</script>
+</body>
+</html>

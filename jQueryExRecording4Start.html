@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	body{
+		font-family: arial;
+		background-color:#999;
+	}	
+	
+.confirmation {
+	list-style: none;
+	width: 480px;
+	height: 480px;
+	padding: 20px;
+	float: left;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+	background-color:hsla(0,0%,10%,0.68);
+	text-align: center;
+	font-size: 12pt;
+	color: #999;
+}	
+
+button {
+    background-color: #4CAF50;
+	font-size: 12pt;
+	color: black;
+	text-transform: uppercase;
+    border: none;
+	font-weight: bold;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+	width: 250px;
+	height: 30px;
+}
+	
+	h3 {
+		font-size: 16pt;
+	}
+	.comments {
+		font-style: italic;
+		text-align: left;
+		margin: 50px 0;
+		list-style: none;
+	}
+	.ticket {
+		background-color: #999;
+		color: black;
+		padding: 15px;
+		margin-top: 20px;
+		text-align: left;
+		display: none;
+	}
+</style>
+
+</head>
+
+	<body><h1>jQuery Travels - Vacation confirmation</h1>
+	<h2>Confirmations</h2>
+	<ul>
+	<li class="confirmation">
+	<h3>Hawaiian Vacation <i style="font-size:24px" class="fa">&#xf145;</i></h3>
+		<p>Paid $399.99 on 9th November 2018</p>
+	<button>Flight Details</button>
+	<div class="ticket">
+	<pre>Depart - Fri, 11/23 
+	United 
+	London - Honolulu
+	11:35AM LHR 9:17PM HNL
+	1 stop SFO 19h 42m
+
+	Return - Fri, 11/30 
+	United 
+	Honolulu - London
+	5:25PM HNL 5:55 AM+2LHR
+	1 stops SFO 26h 30m
+	</pre></div>
+	</li>
+	<li class="confirmation">
+	<h3>Orlando</h3>
+		<p>Paid $399.99 on 9th November 2018</p>
+	<button>Flight Details</button>
+	<div class="ticket">
+		<pre>Depart - Fri, 11/23 
+		United 
+		London - Honolulu
+		11:35AM LHR 9:17PM HNL
+		1 stop SFO 19h 42m
+	
+		Return - Fri, 11/30 
+		United 
+		Honolulu - London
+		5:25PM HNL 5:55 AM+2LHR
+		1 stops SFO 26h 30m
+		</pre></div>
+	</li>
+	<li class="confirmation">
+		
+	<h3>Japan</h3>
+		<p>Paid $399.99 on 9th November 2018</p>
+	<button>Flight Details</button>
+	<div class="ticket">
+		<pre>Depart - Fri, 11/23 
+		United 
+		London - Honolulu
+		11:35AM LHR 9:17PM HNL
+		1 stop SFO 19h 42m
+	
+		Return - Fri, 11/30 
+		United 
+		Honolulu - London
+		5:25PM HNL 5:55 AM+2LHR
+		1 stops SFO 26h 30m
+		</pre></div>
+	</li>
+
+	</ul>
+	<script>
+
+	$(document).ready(function() {
+		$('.confirmation').on('click','button',function(){
+			$(this).closest('.confirmation').find('.ticket').slideDown();
+	});
+	});
+	
+	</script>
+</body>
+</html>

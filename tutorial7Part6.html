@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="tour" data-daily-price="357">
+        <h2>Paris, France Tour</h2>
+        <p>£<span id="total">2,499</span> for <span id="nights-count">7</span> Nights</p>
+        <p>
+          <label for="nights">Number of Nights</label>
+        </p>
+        <p>
+          <input type="number" id="nights" value="7">
+      </p> </div>
+     
+      <script>
+        $(document).ready(function() {
+            $('#nights').on('keyup', function() {
+                var price = +$(this).closest('.tour').data('daily-price');
+                var quantity = +$(this).val();
+                $('#total').text(price * quantity);
+                $('#nights-count').text(quantity);
+            }); 
+        });
+    </script>
+</body>
+</html>
